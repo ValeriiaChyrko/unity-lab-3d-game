@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.InputSystem;
@@ -62,14 +61,6 @@ namespace Platformer._Project.Scripts.Input
                 case InputActionPhase.Canceled:
                     DisableMouseControlCamera.Invoke();
                     break;
-                case InputActionPhase.Disabled:
-                    break;
-                case InputActionPhase.Waiting:
-                    break;
-                case InputActionPhase.Performed:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -83,14 +74,6 @@ namespace Platformer._Project.Scripts.Input
                 case InputActionPhase.Canceled:
                     Dash.Invoke(false);
                     break;
-                case InputActionPhase.Disabled:
-                    break;
-                case InputActionPhase.Waiting:
-                    break;
-                case InputActionPhase.Performed:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
         }
 
@@ -104,14 +87,6 @@ namespace Platformer._Project.Scripts.Input
                 case InputActionPhase.Canceled:
                     Jump.Invoke(false);
                     break;
-                case InputActionPhase.Disabled:
-                    break;
-                case InputActionPhase.Waiting:
-                    break;
-                case InputActionPhase.Performed:
-                    break;
-                default:
-                    throw new ArgumentOutOfRangeException();
             }
         }
     }
