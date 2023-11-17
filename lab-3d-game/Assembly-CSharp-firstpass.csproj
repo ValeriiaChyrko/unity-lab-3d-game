@@ -45,20 +45,151 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Plugins\AurynSky\Forest Pack\Scripts\MaterialMover.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\Plugins\AurynSky\Forest Pack\Scripts\ChestDemo.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
+     <Compile Include="Assets\Plugins\AurynSky\Forest Pack\Scripts\Rotator.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
+     <Compile Include="Assets\Plugins\AurynSky\Forest Pack\Scripts\WheelController.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Cold Night" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Magic Dark" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Electric" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Shaders\CFX3 Multiply Color.shader" />
+     <Folder Include="Assets\Plugins\AllSkyFree\_AllSkyFreeDemoEnvironment\Materials" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Ice" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Animation\SwordAndShield" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Misc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Electric" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Environment" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_SETTINGS.cginc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Misc" />
      <Folder Include="Assets\Plugins" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CartoonFX Free.txt" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Fire" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Light" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Electric" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Nature" />
      <Folder Include="Assets\Plugins\Demigiant" />
+     <Folder Include="Assets\Plugins\AllSkyFree\_AllSkyFreeDemoEnvironment" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Scripts" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Overcast Low" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Liquids" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR.cginc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Misc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Magic" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX Prefabs" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Animation\SwordAndShield\InPlace" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Textures" />
      <Folder Include="Assets\Plugins\Demigiant\DOTween\Modules" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Fire" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Prefab" />
+     <Folder Include="Assets\Plugins\AurynSky" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Fire" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Light" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Explosions" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Cold Sunset" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Scenes" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Hits" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Mesh" />
      <Folder Include="Assets\Plugins\Demigiant\DOTween" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Animated" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Fire" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Night MoonBurst" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Magic Misc" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Scene" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Light" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Meshes" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Misc" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Materials" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Prefabs\Prefabs_Blue" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails\Plain" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Stretched" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Blood" />
+     <Folder Include="Assets\Plugins\JMO Assets" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Misc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Eerie" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Magic Misc" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\Readme Cartoon FX Remaster FREE.txt" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Animation" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Light" />
+     <Folder Include="Assets\Plugins\CasualGameSounds" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Shaders" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Texts" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Skull &amp; Ghosts Effects" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Prefabs\Prefabs_Red" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Explosions" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Misc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Mesh" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\UI Canvas" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Texts\_Make your own text effect.txt" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX Prefabs\Misc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Ice" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_PASSES.cginc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Space_AnotherPlanet" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Animator" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Electric" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Texture" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Animation\SwordAndShield\RootMotion" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Shaders\CFXM_MobileParticleAdd_Alpha8.shader" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX4 Prefabs\Water" />
      <None Include="Assets\Plugins\Demigiant\DOTween\readme.txt" />
-     <Folder Include="Assets\Plugins\Scenes" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Prefabs" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Fire" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX3 Prefabs\Electric" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Symbols" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Sword Trails" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Epic_GloriousPink" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Cartoon Base NightSky" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Water" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Pickup Items" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs" />
+     <None Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Shaders\CFXR_URP.cginc" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Water" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Prefabs\Impacts" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Epic_BlueSunset" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Deep Dusk" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Debris Hits" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Blood" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX Remaster\CFXR Assets\Graphics" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Material" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Textures" />
+     <Folder Include="Assets\Plugins\RPG Tiny Hero Duo\Animation" />
+     <None Include="Assets\Plugins\AurynSky\Forest Pack\READ ME.txt" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Materials\Electric" />
+     <Folder Include="Assets\Plugins\AurynSky\Forest Pack\Models" />
+     <Folder Include="Assets\Plugins\AllSkyFree\Cartoon Base BlueSky" />
+     <Folder Include="Assets\Plugins\AllSkyFree" />
+     <Folder Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\CFX2 Prefabs\Explosions" />
      <Reference Include="UnityEngine">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Managed\UnityEngine\UnityEngine.dll</HintPath>
      </Reference>
@@ -311,11 +442,11 @@
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="DOTween">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -787,6 +918,30 @@
      </Reference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{446c2cc1-76cf-396b-7ad3-367b5b5990a9}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{7d813cfc-778c-cd5b-3f91-2863db7a529f}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{04733e35-f8c1-ef8c-3f31-15570a0a2688}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{9a2e4fe9-96a2-11fd-6de5-62cfac091b7e}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{92d4c565-52f9-45ae-b89a-3866398397c5}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{454b0234-ffb8-ed13-5d12-614f69129c41}</Project>
+      <Name>CFXRRuntime</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it.

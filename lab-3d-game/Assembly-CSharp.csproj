@@ -45,40 +45,44 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntitySpawnManager.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\Timer.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\ISpawnPointStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\GroundChecker.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\StopwatchTimer.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\CollectibleSpawnManager.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\LinearSpawnPointStrategy.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\RandomSpawnPointStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\CountdownTimer.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Platform\PlatformMover.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntityFactory.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntitySpawner.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\IEntityFactory.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\SpawnEffects.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\Entity.cs" />
      <Compile Include="Assets\MyTools\Setup.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\CameraManager.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntityData.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\CollectibleData.cs" />
+     <Compile Include="Assets\_Project\Scripts\SpawnSystem\Collectible.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\PlayerController.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Platform\PlatformCollisionHandler.cs" />
      <Compile Include="Assets\_Project\Settings\PlayerInputActions.cs" />
      <Compile Include="Assets\_Project\Scripts\Input\InputReader.cs" />
      <Folder Include="Assets" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Animation\SwordAndShield" />
      <Folder Include="Assets\_Project\Scripts\Utils\Timer" />
+     <Folder Include="Assets\_Project\Scripts\SpawnSystem" />
      <Folder Include="Assets\_Project\Animation" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Animation\SwordAndShield\InPlace" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Prefab" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Mesh" />
      <Folder Include="Assets\_Project\Materials" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Scene" />
      <Folder Include="Assets\_Project\Art" />
      <Folder Include="Assets\_Project\Scripts" />
      <Folder Include="Assets\_Project\ScriptableObjects" />
-     <Folder Include="Assets\RPG Tiny Hero Duo" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Animator" />
      <Folder Include="Assets\_Project\Settings" />
      <Folder Include="Assets\_Project\Prefabs" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Texture" />
      <Folder Include="Assets\MyTools" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Animation\SwordAndShield\RootMotion" />
+     <Folder Include="Assets\_Project\Scenes" />
      <Folder Include="Assets\_Project\Scripts\Input" />
      <Folder Include="Assets\_Project" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Material" />
-     <Folder Include="Assets\RPG Tiny Hero Duo\Animation" />
      <Folder Include="Assets\_Project\Scripts\Utils" />
      <Folder Include="Assets\_Project\Scripts\Utils\Platform" />
      <Folder Include="Assets\Resources" />
@@ -334,11 +338,11 @@
      <Reference Include="ReportGeneratorMerged">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.testtools.codecoverage@1.2.4\lib\ReportGenerator\ReportGeneratorMerged.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
-     </Reference>
      <Reference Include="DOTween">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Assets\Plugins\Demigiant\DOTween\DOTween.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Antlr3.Runtime">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\PackageCache\com.unity.visualscripting@1.9.1\Runtime\VisualScripting.Flow\Dependencies\NCalc\Unity.VisualScripting.Antlr3.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="netstandard">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\NetStandard\ref\2.1.0\netstandard.dll</HintPath>
@@ -813,6 +817,30 @@
     <ProjectReference Include="Assembly-CSharp-firstpass.csproj">
       <Project>{f2ee94b7-f906-e0a6-a1e8-d321127f6f4e}</Project>
       <Name>Assembly-CSharp-firstpass</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{446c2cc1-76cf-396b-7ad3-367b5b5990a9}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
+      <Project>{7d813cfc-778c-cd5b-3f91-2863db7a529f}</Project>
+      <Name>ToonyColorsPro.Demo.Editor</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRDemo.csproj">
+      <Project>{04733e35-f8c1-ef8c-3f31-15570a0a2688}</Project>
+      <Name>CFXRDemo</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXREditor.csproj">
+      <Project>{9a2e4fe9-96a2-11fd-6de5-62cfac091b7e}</Project>
+      <Name>CFXREditor</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{92d4c565-52f9-45ae-b89a-3866398397c5}</Project>
+      <Name>KinoBloom.Runtime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXRRuntime.csproj">
+      <Project>{454b0234-ffb8-ed13-5d12-614f69129c41}</Project>
+      <Name>CFXRRuntime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
