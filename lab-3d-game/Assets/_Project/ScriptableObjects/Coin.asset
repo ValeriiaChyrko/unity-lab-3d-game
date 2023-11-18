@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d066267d6449cfbe2dfdd979404905, type: 3}
   m_Name: Coin
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2002657550149581040, guid: bc5018dc8a4baa245aadf282cddfe417, type: 3}
+  prefab: {fileID: 326447646804015679, guid: b9790fc71eb49414fa001bf41744eda7, type: 3}
   score: 5
