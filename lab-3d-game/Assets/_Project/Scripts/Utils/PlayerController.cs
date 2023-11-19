@@ -3,6 +3,7 @@ using Cinemachine;
 using KBCore.Refs;
 using Platformer._Project.Scripts.StateMachine;
 using Platformer._Project.Scripts.StateMachine.PlayerStates;
+using Platformer._Project.Scripts.Utils;
 using Platformer._Project.Scripts.Utils.Timer;
 using UnityEngine;
 
@@ -13,7 +14,7 @@ namespace Platformer._Project.Scripts.Input
         [Header("References")]
         [SerializeField, Self] private Rigidbody rb;
         [SerializeField, Self] private Animator animator;
-        [SerializeField, Self] GroundChecker groundChecker;
+        [SerializeField, Self] private GroundChecker groundChecker;
         [SerializeField, Anywhere] private InputReader input;
         [SerializeField, Anywhere]private  CinemachineFreeLook freeLookVCam;
         
@@ -25,13 +26,18 @@ namespace Platformer._Project.Scripts.Input
         [Header("Jump Settings")]
         [SerializeField] private float jumpForce = 10f;
         [SerializeField] private float jumpDuration = 0.5f;
-        [SerializeField] private float jumpCooldown = 0f;
+        [SerializeField] private float jumpCooldown;
         [SerializeField] private float gravityMultiplier = 3f;
         
         [Header("Dash Settings")]
         [SerializeField] private float dashForce = 10f;
         [SerializeField] private float dashDuration = 1f;
         [SerializeField] private float dashCooldown = 2f;
+        
+        [Header("Attack Settings")]
+        [SerializeField] private float attackCooldown = 0.5f;
+        [SerializeField] private float attackDistance = 1f;
+        [SerializeField] private int attackDamage = 10;
 
         private const float ZeroF = 0f;
         
@@ -49,6 +55,8 @@ namespace Platformer._Project.Scripts.Input
         private CountdownTimer _jumpCooldownTimer;
         private CountdownTimer _dashTimer;
         private CountdownTimer _dashCooldownTimer;
+        private CountdownTimer _attackTimer;
+
 
         private StateMachine.StateMachine _stateMachine;
         // Animator parameters
@@ -58,10 +66,12 @@ namespace Platformer._Project.Scripts.Input
         private void OnEnable() {
             input.Jump += OnJump;
             input.Dash += OnDash;
+            input.Attack += OnAttack;
         }
         private void OnDisable() {
             input.Jump -= OnJump;
-            input.Dash += OnDash;
+            input.Dash -= OnDash;
+            input.Attack -= OnAttack;
         }
         
         private void Awake() {
@@ -86,15 +96,28 @@ namespace Platformer._Project.Scripts.Input
             var locomotionState = new LocomotionState(this, animator);
             var jumpState = new JumpState(this, animator);
             var dashState = new DashState(this, animator);
+            var attackState = new AttackState(this, animator);
+            var dieState = new DieState(this, animator); 
 
             // Define transitions
             At(locomotionState, jumpState, new FuncPredicate(() => _jumpTimer.IsRunning));
             At(locomotionState, dashState, new FuncPredicate(() => _dashTimer.IsRunning));
+            At(locomotionState, attackState, new FuncPredicate(() => _attackTimer.IsRunning));
+            At(locomotionState, dieState, new FuncPredicate(() => GetComponent<Health>().IsDead));
+            At(attackState, locomotionState, new FuncPredicate(() => !_attackTimer.IsRunning));
             
-            Any(locomotionState, new FuncPredicate(() => groundChecker.IsGrounded && !_jumpTimer.IsRunning && !_dashTimer.IsRunning));
-            
+            Any(locomotionState, new FuncPredicate(ReturnToLocomotionState));
+    
             // Set initial state
             _stateMachine.SetState(locomotionState);
+        }
+
+        
+        private bool ReturnToLocomotionState() {
+            return groundChecker.IsGrounded 
+                   && !_attackTimer.IsRunning 
+                   && !_jumpTimer.IsRunning 
+                   && !_dashTimer.IsRunning;
         }
         
         private void At(IState from, IState to, IPredicate condition) => _stateMachine.AddTransition(from, to, condition);
@@ -204,6 +227,24 @@ namespace Platformer._Project.Scripts.Input
             }
         }
         
+        private void OnAttack() {
+            if (!_attackTimer.IsRunning) {
+                _attackTimer.Start();
+            }
+        }
+        
+        public void Attack() {
+            var attackPos = transform.position + transform.forward;
+            var hitEnemies = Physics.OverlapSphere(attackPos, attackDistance);
+            
+            foreach (var enemy in hitEnemies) {
+                Debug.Log(enemy.name);
+                if (enemy.CompareTag("Enemy")) {
+                    enemy.GetComponent<Health>().TakeDamage(attackDamage);
+                }
+            }
+        }
+        
         private void SetupTimers() {
             // Setup timers
             _jumpTimer = new CountdownTimer(jumpDuration);
@@ -220,8 +261,10 @@ namespace Platformer._Project.Scripts.Input
                 _dashVelocity = 1f;
                 _dashCooldownTimer.Start();
             };
+            
+            _attackTimer = new CountdownTimer(attackCooldown);
 
-            _timers = new List<Timer>(4) { _jumpTimer, _jumpCooldownTimer, _dashTimer, _dashCooldownTimer };
+            _timers = new List<Timer>(5) { _jumpTimer, _jumpCooldownTimer, _dashTimer, _dashCooldownTimer, _attackTimer };
         }
     }
 }

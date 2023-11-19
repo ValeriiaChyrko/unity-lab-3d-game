@@ -16,7 +16,7 @@ namespace Platformer._Project.Scripts.Utils.Enemy
         [SerializeField, Child] private Animator animator;
         
         [SerializeField] private float wanderRadius = 10f;
-        [SerializeField] private float timeBetweenAttacks = 1f;
+        [SerializeField] private float timeBetweenAttacks = 2f;
         
         private StateMachine.StateMachine _stateMachine;
         
@@ -63,6 +63,7 @@ namespace Platformer._Project.Scripts.Utils.Enemy
             if (_attackTimer.IsRunning) return;
             
             _attackTimer.Start();
+            playerDetector.PlayerHealth.TakeDamage(10);
         }
     }
 }
