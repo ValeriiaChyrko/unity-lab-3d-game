@@ -46,11 +46,14 @@
   </ItemGroup>
   <ItemGroup>
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntitySpawnManager.cs" />
+     <Compile Include="Assets\_Project\Scripts\StateMachine\EnemyStates\EnemyChaseState.cs" />
+     <Compile Include="Assets\_Project\Scripts\StateMachine\EnemyStates\EnemyAttackState.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\Timer.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\IPredicate.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\ISpawnPointStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\GroundChecker.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\StopwatchTimer.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\Enemy\ConeDetectionStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\Transition.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\PlayerStates\BaseState.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\PlayerStates\LocomotionState.cs" />
@@ -60,17 +63,22 @@
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\RandomSpawnPointStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Timer\CountdownTimer.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\IState.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\Enemy\Enemy.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\PlayerStates\JumpState.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Platform\PlatformMover.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntityFactory.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\PlayerStates\DashState.cs" />
+     <Compile Include="Assets\_Project\Scripts\StateMachine\EnemyStates\EnemyWanderState.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntitySpawner.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\IEntityFactory.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\Enemy\IDetectionStrategy.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\SpawnEffects.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\Enemy\PlayerDetector.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\Entity.cs" />
      <Compile Include="Assets\MyTools\Setup.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\CameraManager.cs" />
      <Compile Include="Assets\_Project\Scripts\StateMachine\StateMachine.cs" />
+     <Compile Include="Assets\_Project\Scripts\StateMachine\EnemyStates\EnemyBaseState.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\EntityData.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\CollectibleData.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\Collectible.cs" />
@@ -81,23 +89,24 @@
      <Compile Include="Assets\_Project\Scripts\Input\InputReader.cs" />
      <Folder Include="Assets" />
      <Folder Include="Assets\_Project\Scripts\Utils\Timer" />
-     <Folder Include="Assets\Homeless\UI Assets" />
      <Folder Include="Assets\_Project\Scripts\SpawnSystem" />
      <Folder Include="Assets\_Project\Scripts\StateMachine" />
      <Folder Include="Assets\_Project\Animation" />
-     <Folder Include="Assets\Homeless\UI Assets\Item_Icons" />
+     <Folder Include="Assets\_Project\Prefabs\CollactibleSpawnManagers" />
      <Folder Include="Assets\_Project\Scripts\StateMachine\PlayerStates" />
      <Folder Include="Assets\_Project\Materials" />
      <Folder Include="Assets\_Project\Art" />
      <Folder Include="Assets\_Project\Scripts" />
      <Folder Include="Assets\_Project\ScriptableObjects" />
      <Folder Include="Assets\_Project\Settings" />
+     <Folder Include="Assets\_Project\Scripts\Utils\Enemy" />
      <Folder Include="Assets\_Project\Prefabs" />
-     <Folder Include="Assets\Homeless" />
+     <Folder Include="Assets\_Project\Scenes\Level 02" />
      <Folder Include="Assets\MyTools" />
      <Folder Include="Assets\_Project\Scenes" />
      <Folder Include="Assets\_Project\Scripts\Input" />
      <Folder Include="Assets\_Project" />
+     <Folder Include="Assets\_Project\Scripts\StateMachine\EnemyStates" />
      <Folder Include="Assets\_Project\Scripts\Utils" />
      <Folder Include="Assets\_Project\Scripts\Utils\Platform" />
      <Folder Include="Assets\Resources" />
@@ -731,6 +740,9 @@
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.Burst.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
@@ -800,6 +812,9 @@
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Updater">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Updater.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.State.Editor.dll</HintPath>
      </Reference>
@@ -815,14 +830,20 @@
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
      </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
+     </Reference>
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
      </Reference>
      <Reference Include="Cinemachine">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Animation.Rigging">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>

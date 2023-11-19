@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f8d066267d6449cfbe2dfdd979404905, type: 3}
   m_Name: Chest
   m_EditorClassIdentifier: 
-  prefab: {fileID: 2115515828916338551, guid: 9e6781b7abd9d9844b2a0657fbc06356, type: 3}
+  prefab: {fileID: 100096, guid: 22d89f75378c5f841a7ab97e49c98b72, type: 3}
   score: 25

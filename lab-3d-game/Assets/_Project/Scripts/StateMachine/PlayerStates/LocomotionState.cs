@@ -7,7 +7,6 @@ namespace Platformer._Project.Scripts.StateMachine.PlayerStates
         public LocomotionState(PlayerController player, Animator animator) : base(player, animator) { }
         
         public override void OnEnter() {
-            Debug.Log("LocomotionState.Enter");
             Animator.CrossFade(LocomotionHash, CrossFadeDuration);
         }
         

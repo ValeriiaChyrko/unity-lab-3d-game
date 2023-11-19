@@ -7,7 +7,6 @@ namespace Platformer._Project.Scripts.StateMachine.PlayerStates
         public JumpState(PlayerController player, Animator animator) : base(player, animator) { }
 
         public override void OnEnter() {
-            Debug.Log("JumpState.Enter");
             Animator.CrossFade(JumpHash, CrossFadeDuration);
         }
 

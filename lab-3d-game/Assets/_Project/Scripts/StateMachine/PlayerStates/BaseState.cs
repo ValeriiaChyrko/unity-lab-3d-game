@@ -36,7 +36,7 @@ namespace Platformer._Project.Scripts.StateMachine.PlayerStates
 
         public virtual void OnExit()
         {
-            Debug.Log("BaseState.OnExit");
+            //noop
         }
     }
 }
