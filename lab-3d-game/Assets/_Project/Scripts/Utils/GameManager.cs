@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Platformer._Project.Scripts.UI.Menus;
+using UnityEngine;
 
 namespace Platformer._Project.Scripts.Utils
 {
@@ -13,6 +14,13 @@ namespace Platformer._Project.Scripts.Utils
             } else {
                 Destroy(gameObject);
             }
+        }
+        
+        private void Update()
+        {
+            if (!UnityEngine.Input.GetKeyDown(KeyCode.Escape)) return;
+
+            PauseMenu.SetState();
         }
         
         public void AddScore(int score) {

@@ -1,5 +1,7 @@
 ﻿using System;
+using System.Collections;
 using Platformer._Project.EventSystem;
+using Platformer.MyTools;
 using UnityEngine;
 
 namespace Platformer._Project.Scripts.Utils
@@ -11,7 +13,6 @@ namespace Platformer._Project.Scripts.Utils
         private int _currentHealth;
         
         public bool IsDead => _currentHealth <= 0;
-        public static event Action OnPlayerDeath;
             
         private void Awake() {
             _currentHealth = maxHealth;
@@ -24,7 +25,7 @@ namespace Platformer._Project.Scripts.Utils
         public void TakeDamage(int damage) {
             _currentHealth -= damage;
             if (_currentHealth <= 0)
-                OnPlayerDeath?.Invoke();
+                EnableGameOverMenuWithDelay();
             
             PublishHealthPercentage();
         }
@@ -32,6 +33,17 @@ namespace Platformer._Project.Scripts.Utils
         private void PublishHealthPercentage() {
             if (playerHealthChannel != null)
                 playerHealthChannel.Invoke(_currentHealth / (float) maxHealth);
+        }
+        
+        private void EnableGameOverMenuWithDelay()
+        {
+            StartCoroutine(EnableGameOverMenuCoroutine(1.0f));
+        }
+
+        private static IEnumerator EnableGameOverMenuCoroutine(float delay)
+        {
+            yield return new WaitForSeconds(delay);
+            ScenesManager.Instance.LoadGameOverScene();
         }
     }
 }
