@@ -91,6 +91,7 @@
      <Compile Include="Assets\_Project\Scripts\UI\ScoreUI.cs" />
      <Compile Include="Assets\_Project\Scripts\UI\Menus\GameOverMenu.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\FinishLevel.cs" />
+     <Compile Include="Assets\_Project\Scripts\Utils\Entity\PlayerData.cs" />
      <Compile Include="Assets\_Project\Scripts\Utils\Enemy\PlayerDetector.cs" />
      <Compile Include="Assets\_Project\Scripts\SpawnSystem\Entity.cs" />
      <Compile Include="Assets\MyTools\Setup.cs" />
@@ -124,6 +125,7 @@
      <Folder Include="Assets\_Project\Scenes\Menus" />
      <Folder Include="Assets\_Project\Art" />
      <Folder Include="Assets\_Project\Scripts\Audio" />
+     <Folder Include="Assets\_Project\Scripts\Utils\Entity" />
      <Folder Include="Assets\_Project\Scripts" />
      <Folder Include="Assets\_Project\ScriptableObjects" />
      <Folder Include="Assets\_Project\Settings" />

@@ -1,6 +1,5 @@
 ﻿using KBCore.Refs;
 using Platformer._Project.Scripts.Audio;
-using Platformer._Project.Scripts.SpawnSystem;
 using Platformer._Project.Scripts.StateMachine;
 using Platformer._Project.Scripts.StateMachine.EnemyStates;
 using Platformer._Project.Scripts.Utils.Timer;
@@ -10,7 +9,7 @@ using UnityEngine.AI;
 namespace Platformer._Project.Scripts.Utils.Enemy
 {
     [RequireComponent(typeof(NavMeshAgent))]
-    public class Enemy : Entity
+    public class Enemy : SpawnSystem.Entity
     {
         [SerializeField, Self] private NavMeshAgent agent;
         [SerializeField, Self] private PlayerDetector playerDetector;

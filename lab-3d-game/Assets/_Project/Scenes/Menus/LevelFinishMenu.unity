@@ -739,6 +739,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   scoreText: {fileID: 1246702167}
+  maxScoreText: {fileID: 827757213}
 --- !u!1 &1280028703
 GameObject:
   m_ObjectHideFlags: 0

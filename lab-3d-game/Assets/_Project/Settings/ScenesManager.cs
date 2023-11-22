@@ -34,7 +34,6 @@ namespace Platformer._Project.Settings
 
         private void LoadScene(string sceneKey, bool additive = false)
         {
-            Time.timeScale = 0;
             if (additive)
                 SceneManager.LoadScene(sceneKey, LoadSceneMode.Additive);
             else
@@ -46,7 +45,6 @@ namespace Platformer._Project.Settings
         public void UnloadMainMenu()
         {
             SceneManager.UnloadSceneAsync(MAIN_MENU_SCENE_KEY);
-            Time.timeScale = SceneManager.loadedSceneCount > 3 ? 0 : 1;
         }
 
         public void LoadSettingsMenu() => LoadScene(SETTINGS_SCENE_KEY, true);
@@ -54,7 +52,6 @@ namespace Platformer._Project.Settings
         public void UnloadSettingsMenu()
         {
             SceneManager.UnloadSceneAsync(SETTINGS_SCENE_KEY);
-            Time.timeScale = SceneManager.loadedSceneCount > 3 ? 0 : 1;
         }
 
         public void LoadGameOverScene() => LoadScene(GAME_OVER_SCENE_KEY, true);
@@ -64,14 +61,13 @@ namespace Platformer._Project.Settings
         public void UnloadPauseScene()
         {
             SceneManager.UnloadSceneAsync(PAUSE_SCENE_KEY);
-            Time.timeScale = SceneManager.loadedSceneCount > 3 ? 0 : 1;
         }
 
         public void LoadNextLevelMenu() => LoadScene(LEVEL_FINISH_SCENE_KEY);
 
         public void LoadFirstLevel()
         {
-            currentLevel = currentLevel ?? LEVELS_SCENE_KEYS[0];
+            currentLevel = LEVELS_SCENE_KEYS[0];
             SceneManager.LoadScene(currentLevel);
             SceneManager.LoadScene(GAME_PLAY_SCENE_KEY, LoadSceneMode.Additive);
             Time.timeScale = 1;
@@ -98,7 +94,6 @@ namespace Platformer._Project.Settings
             else
             {
                 SceneManager.LoadScene(GAME_FINISH_SCENE_KEY);
-                Time.timeScale = 0;
             }
         }
     }

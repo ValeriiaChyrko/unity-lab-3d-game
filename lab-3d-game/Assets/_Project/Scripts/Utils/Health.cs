@@ -1,8 +1,6 @@
-﻿using System;
-using System.Collections;
+﻿using System.Collections;
 using Platformer._Project.EventSystem;
 using Platformer._Project.Settings;
-using Platformer.MyTools;
 using UnityEngine;
 
 namespace Platformer._Project.Scripts.Utils
@@ -11,12 +9,12 @@ namespace Platformer._Project.Scripts.Utils
         [SerializeField] private int maxHealth = 100;
         [SerializeField] private FloatEventChannel playerHealthChannel;
 
-        private int _currentHealth;
+        public static int CurrentHealth { get; private set; }
         
-        public bool IsDead => _currentHealth <= 0;
+        public bool IsDead => CurrentHealth <= 0;
             
         private void Awake() {
-            _currentHealth = maxHealth;
+            CurrentHealth = maxHealth;
         }
 
         private void Start() {
@@ -24,8 +22,8 @@ namespace Platformer._Project.Scripts.Utils
         }
         
         public void TakeDamage(int damage) {
-            _currentHealth -= damage;
-            if (_currentHealth <= 0)
+            CurrentHealth -= damage;
+            if (CurrentHealth <= 0)
                 EnableGameOverMenuWithDelay();
             
             PublishHealthPercentage();
@@ -33,7 +31,7 @@ namespace Platformer._Project.Scripts.Utils
 
         private void PublishHealthPercentage() {
             if (playerHealthChannel != null)
-                playerHealthChannel.Invoke(_currentHealth / (float) maxHealth);
+                playerHealthChannel.Invoke(CurrentHealth / (float) maxHealth);
         }
         
         private void EnableGameOverMenuWithDelay()

@@ -7,6 +7,11 @@ namespace Platformer._Project.Scripts.UI.Menus
 {
     public class MainMenu : MonoBehaviour
     {
+        private void Awake()
+        {
+            Time.timeScale = 0;
+        }
+        
         public void OnClickStart()
         {
             ScenesManager.Instance.LoadFirstLevel();
