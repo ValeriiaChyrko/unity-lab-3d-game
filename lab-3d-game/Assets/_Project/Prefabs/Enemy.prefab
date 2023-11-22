@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 6622307678799801296}
   - component: {fileID: 2292944090064948931}
   - component: {fileID: 6166575999494488665}
-  - component: {fileID: 3427986538044926399}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -115,21 +114,7 @@ MonoBehaviour:
   playerDetector: {fileID: 2292944090064948931}
   animator: {fileID: 5445439214845716783}
   wanderRadius: 10
-  timeBetweenAttacks: 0
---- !u!114 &3427986538044926399
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 380785250711149637}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 54e4556f0f764f879931221dd2ea395d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxHealth: 100
-  playerHealthChannel: {fileID: 0}
+  timeBetweenAttacks: 1
 --- !u!1001 &5440419935565976021
 PrefabInstance:
   m_ObjectHideFlags: 0

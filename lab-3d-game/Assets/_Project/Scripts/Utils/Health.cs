@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections;
 using Platformer._Project.EventSystem;
+using Platformer._Project.Settings;
 using Platformer.MyTools;
 using UnityEngine;
 

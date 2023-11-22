@@ -1,4 +1,5 @@
 ﻿using KBCore.Refs;
+using Platformer._Project.Scripts.Audio;
 using Platformer._Project.Scripts.SpawnSystem;
 using Platformer._Project.Scripts.StateMachine;
 using Platformer._Project.Scripts.StateMachine.EnemyStates;
@@ -17,6 +18,9 @@ namespace Platformer._Project.Scripts.Utils.Enemy
         
         [SerializeField] private float wanderRadius = 10f;
         [SerializeField] private float timeBetweenAttacks = 2f;
+        
+        [SerializeField] private AudioClip onHitAudio;
+        
         
         private StateMachine.StateMachine _stateMachine;
         
@@ -63,6 +67,7 @@ namespace Platformer._Project.Scripts.Utils.Enemy
             if (_attackTimer.IsRunning) return;
             
             _attackTimer.Start();
+            AudioManager.Instance.PlaySound(onHitAudio);
             playerDetector.PlayerHealth.TakeDamage(10);
         }
     }

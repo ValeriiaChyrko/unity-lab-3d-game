@@ -1,7 +1,7 @@
 ﻿using DG.Tweening;
 using UnityEngine;
 
-namespace Platformer._Project.Scripts.SpawnSystem
+namespace Platformer._Project.Scripts.Utils
 {
     [RequireComponent(typeof(AudioSource))]
     public class SpawnEffects : MonoBehaviour {
