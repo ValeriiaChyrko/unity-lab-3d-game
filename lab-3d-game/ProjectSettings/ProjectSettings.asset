@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Ostroh Academy
   productName: lab-3d-game
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -747,7 +747,7 @@ PlayerSettings:
   hmiLogStartupTiming: 0
   hmiCpuConfiguration: 
   apiCompatibilityLevel: 6
-  activeInputHandler: 0
+  activeInputHandler: 2
   windowsGamepadBackendHint: 0
   cloudProjectId: 63b56974-c006-4f23-adb3-cf26ab86002b
   framebufferDepthMemorylessMode: 0

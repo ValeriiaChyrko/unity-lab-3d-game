@@ -17,6 +17,8 @@
 mono_crash.*
 
 # Build results
+/[Ll]ibrary/
+lab-3d-game/[Ll]ibrary/
 [Dd]ebug/
 [Dd]ebugPublic/
 [Rr]elease/

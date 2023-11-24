@@ -19,6 +19,7 @@ namespace Platformer._Project.Scripts.UI.Menus
 
         public void OnClickContinue()
         {
+            Time.timeScale = 1;
             if (SceneManager.sceneCount > 1)
                 ScenesManager.Instance.UnloadMainMenu();
             else

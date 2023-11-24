@@ -4,5 +4,32 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_Project/Scenes/GamePlay.unity
+    guid: a62941cc6c7c5b247aa62aba35f36cda
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/LevelFinishMenu.unity
+    guid: b36a755f8016c9b419bf4316916006ed
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/GameFinishMenu.unity
+    guid: 321cb697bc33d13458c0b1fe13be65b9
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/GameOverMenu.unity
+    guid: aea0ea8a0259da841aca38525ba8513e
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/MainMenu.unity
+    guid: 09b499224cca3054981b33ccec544439
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/MusicSettingsMenu.unity
+    guid: 3f4e1be11d19d8543816f1a1948a83a1
+  - enabled: 1
+    path: Assets/_Project/Scenes/Menus/PauseMenu.unity
+    guid: 154a3d7e9ca2a384398d1b5053ce7dfd
+  - enabled: 1
+    path: Assets/_Project/Scenes/Levels/Level 01.unity
+    guid: 1863350a2e674d64a9086774c6c968e1
+  - enabled: 1
+    path: Assets/_Project/Scenes/Levels/Level 02.unity
+    guid: 09a4741cb9dff22419e0b625426dd80d
   m_configObjects: {}

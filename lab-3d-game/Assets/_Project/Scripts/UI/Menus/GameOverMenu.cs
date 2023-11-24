@@ -13,6 +13,7 @@ namespace Platformer._Project.Scripts.UI.Menus
         
         public void RestartLevel()
         {
+            Time.timeScale = 1;
             ScenesManager.Instance.LoadCurrentLevel();
         }
     }

@@ -51,6 +51,7 @@ namespace Platformer._Project.Scripts.UI.Menus
         
         public static void DeactivateMenu()
         {
+            Time.timeScale = 1;
             ScenesManager.Instance.UnloadSettingsMenu();
         }
     }
