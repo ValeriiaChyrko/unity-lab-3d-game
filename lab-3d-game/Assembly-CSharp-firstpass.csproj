@@ -45,27 +45,27 @@
     <Analyzer Include="C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\Tools\Unity.SourceGenerators\Unity.Properties.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics.cs" />
-     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
-     <Compile Include="Assets\Plugins\ProgressBar\Script\ProgressBarCircle.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUtils.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightIntensityFade.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDir.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RandomDirectionTranslate.cs" />
-     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleAudio.cs" />
      <Compile Include="Assets\Plugins\ProgressBar\Script\ProgressBar.cs" />
-     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleSprite.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_RotateCamera.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_New.cs" />
-     <Compile Include="Assets\Plugins\ProgressBar\Scene\Demo.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_Demo_Translate.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoDestructShuriken.cs" />
      <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUI.cs" />
      <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Demo\Assets\CFX_AutoStopLoopedEffect.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModulePhysics2D.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleUnityVersion.cs" />
+     <Compile Include="Assets\Plugins\Demigiant\DOTween\Modules\DOTweenModuleEPOOutline.cs" />
+     <Compile Include="Assets\Plugins\ProgressBar\Script\ProgressBarCircle.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_AutoRotate.cs" />
+     <Compile Include="Assets\Plugins\JMO Assets\Cartoon FX (legacy)\Scripts\CFX_LightFlicker.cs" />
+     <Compile Include="Assets\Plugins\ProgressBar\Scene\Demo.cs" />
      <Folder Include="Assets\Plugins\Medieval_Gold" />
      <Folder Include="Assets\Plugins\RPG Monster DUO PBR Polyart\Prefabs" />
      <None Include="Assets\Plugins\TextMesh Pro\Shaders\TMPro.cginc" />
@@ -879,8 +879,8 @@
      <Reference Include="System.Xml.Serialization">
      <HintPath>C:\Program Files\Unity\Hub\Editor\2022.3.13f1\Editor\Data\NetStandard\compat\2.1.0\shims\netfx\System.Xml.Serialization.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.EditorCoroutines.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Core.Runtime">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="com.unity.cinemachine.editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\com.unity.cinemachine.editor.dll</HintPath>
@@ -891,20 +891,74 @@
      <Reference Include="Unity.Burst.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Burst.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Burst">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
+     <Reference Include="Unity.Animation.Rigging.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Rider.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VisualScripting.Flow">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Mathematics.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Core.ShaderLibrary">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Core.ShaderLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="PPv2URPConverters">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\PPv2URPConverters.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.TextMeshPro">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Animation.Rigging">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.VSCode.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.EditorCoroutines.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.EditorCoroutines.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.RenderPipelines.Universal.Runtime">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Runtime.dll</HintPath>
      </Reference>
      <Reference Include="Unity.PlasticSCM.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.PlasticSCM.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Animation.Rigging.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Animation.Rigging.Editor.dll</HintPath>
+     <Reference Include="Unity.Burst">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Burst.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Timeline.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Shared.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.Shared.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.ShaderGraph.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.ShaderGraph.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualStudio.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualStudio.Editor.dll</HintPath>
@@ -918,20 +972,14 @@
      <Reference Include="Unity.VisualScripting.Core.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.Core.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Rider.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Rider.Editor.dll</HintPath>
-     </Reference>
      <Reference Include="UnityEngine.UI">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\UnityEngine.UI.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.VisualScripting.Flow">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.dll</HintPath>
      </Reference>
      <Reference Include="Unity.VisualScripting.Flow.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.Flow.Editor.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.Mathematics.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Mathematics.Editor.dll</HintPath>
+     <Reference Include="Unity.RenderPipeline.Universal.ShaderLibrary">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipeline.Universal.ShaderLibrary.dll</HintPath>
      </Reference>
      <Reference Include="Unity.Timeline">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Timeline.dll</HintPath>
@@ -942,17 +990,8 @@
      <Reference Include="Unity.InputSystem.ForUI">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.InputSystem.ForUI.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Mono.Reflection.dll</HintPath>
-     </Reference>
      <Reference Include="Unity.VisualScripting.SettingsProvider.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.SettingsProvider.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Performance.Profile-Analyzer.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Performance.Profile-Analyzer.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.TestTools.CodeCoverage.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TestTools.CodeCoverage.Editor.OpenCover.Model">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TestTools.CodeCoverage.Editor.OpenCover.Model.dll</HintPath>
@@ -969,11 +1008,14 @@
      <Reference Include="Unity.Mathematics">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Mathematics.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.TextMeshPro">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TextMeshPro.dll</HintPath>
+     <Reference Include="Unity.RenderPipelines.Universal.Shaders">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.RenderPipelines.Universal.Shaders.dll</HintPath>
      </Reference>
      <Reference Include="Unity.TextMeshPro.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.TextMeshPro.Editor.dll</HintPath>
+     </Reference>
+     <Reference Include="Unity.Searcher.Editor">
+     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Searcher.Editor.dll</HintPath>
      </Reference>
      <Reference Include="Unity.AI.Navigation.Editor">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.dll</HintPath>
@@ -981,24 +1023,11 @@
      <Reference Include="Unity.VisualScripting.State">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VisualScripting.State.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.AI.Navigation.Editor.ConversionSystem">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.AI.Navigation.Editor.ConversionSystem.dll</HintPath>
-     </Reference>
      <Reference Include="Cinemachine">
      <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Cinemachine.dll</HintPath>
      </Reference>
-     <Reference Include="Unity.VSCode.Editor">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.VSCode.Editor.dll</HintPath>
-     </Reference>
-     <Reference Include="Unity.Animation.Rigging">
-     <HintPath>C:\Users\Valeriia\UnityProjects\GitHub\unity-lab-3d-game\lab-3d-game\Library\ScriptAssemblies\Unity.Animation.Rigging.dll</HintPath>
-     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
-      <Project>{446c2cc1-76cf-396b-7ad3-367b5b5990a9}</Project>
-      <Name>CFXR.WelcomeScreen</Name>
-    </ProjectReference>
     <ProjectReference Include="ToonyColorsPro.Demo.Editor.csproj">
       <Project>{7d813cfc-778c-cd5b-3f91-2863db7a529f}</Project>
       <Name>ToonyColorsPro.Demo.Editor</Name>
@@ -1011,13 +1040,17 @@
       <Project>{9a2e4fe9-96a2-11fd-6de5-62cfac091b7e}</Project>
       <Name>CFXREditor</Name>
     </ProjectReference>
-    <ProjectReference Include="KinoBloom.Runtime.csproj">
-      <Project>{92d4c565-52f9-45ae-b89a-3866398397c5}</Project>
-      <Name>KinoBloom.Runtime</Name>
-    </ProjectReference>
     <ProjectReference Include="CFXRRuntime.csproj">
       <Project>{454b0234-ffb8-ed13-5d12-614f69129c41}</Project>
       <Name>CFXRRuntime</Name>
+    </ProjectReference>
+    <ProjectReference Include="CFXR.WelcomeScreen.csproj">
+      <Project>{446c2cc1-76cf-396b-7ad3-367b5b5990a9}</Project>
+      <Name>CFXR.WelcomeScreen</Name>
+    </ProjectReference>
+    <ProjectReference Include="KinoBloom.Runtime.csproj">
+      <Project>{92d4c565-52f9-45ae-b89a-3866398397c5}</Project>
+      <Name>KinoBloom.Runtime</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
