@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3babb3e576c9c3d4e905cc975ac44323, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -219,6 +219,7 @@ MonoBehaviour:
   moveTo: {x: 0, y: 0, z: 5}
   moveTime: 1
   ease: 7
+  player: {fileID: 844742375}
 --- !u!65 &24560460
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -794,6 +795,7 @@ MonoBehaviour:
   moveTo: {x: 0, y: 10, z: 0}
   moveTime: 3
   ease: 7
+  player: {fileID: 844742375}
 --- !u!65 &743060581
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1003,6 +1005,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &844742375 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2919074035914813032, guid: 7e192df42ecbad64bbc0511599984e48, type: 3}
+  m_PrefabInstance: {fileID: 3057015823692816147}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &851039437
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2194,6 +2201,10 @@ PrefabInstance:
       propertyPath: freeLookVCam
       value: 
       objectReference: {fileID: 1355559469}
+    - target: {fileID: 2731260073693403458, guid: 7e192df42ecbad64bbc0511599984e48, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2919074035914813032, guid: 7e192df42ecbad64bbc0511599984e48, type: 3}
       propertyPath: m_Name
       value: Player
